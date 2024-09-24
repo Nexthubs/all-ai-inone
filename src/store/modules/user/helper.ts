@@ -18,9 +18,9 @@ export interface UserState {
 export function defaultSetting(): UserState {
   return {
     userInfo: {
-      avatar: 'https://raw.githubusercontent.com/Dooy/chatgpt-web-midjourney-proxy/main/src/assets/avatar.jpg',
-      name:  t('mjset.sysname'),//'AI绘图',
-      description: 'Star on <a href="https://github.com/Dooy/chatgpt-web-midjourney-proxy" class="text-blue-500" target="_blank" >GitHub</a>',
+      avatar: 'https://www.nexthubs.cn/upload/avatar.png',
+      name:  t('mjset.sysname'),//'友AI工具箱2.0',
+      description: 'Nexthubs <a href="https://ai.nexthubs.com/" class="text-blue-500" target="_blank" >友AI工具箱</a>',
     },
   }
 }
