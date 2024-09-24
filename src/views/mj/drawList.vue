@@ -67,17 +67,6 @@ async function onConversation() {
 //     return
 
   controller = new AbortController()
-  if( message.action && message.action=='face' ){
-    let promptMsg: Chat.Chat= getInitChat( t('mjchat.face')); //'换脸'
-    try{
-          let images= await localSaveAny( JSON.stringify( [message.data.sourceBase64,message.data.targetBase64 ] )  ) ;
-          mlog('key', images );
-          promptMsg.opt= {images:[images]}
-     }catch(e){
-         mlog('localSaveAny error',e);
-     }
-     addChat(  +uuid, promptMsg );
-     //return ;
 
   }else if( message.action && message.action=='blend' ){
      // promptMsg.opt={  images: message.fileBase64 }
@@ -92,35 +81,7 @@ async function onConversation() {
      addChat(  +uuid, promptMsg );
 
     
-  }else if( message.action && ['gpt.dall-e-3','shorten'].indexOf(message.action) >-1   ){ //gpt.dall-e-3 //subTas
-    let promptMsg: Chat.Chat= getInitChat( message.data.prompt ); 
-    mlog( 'gpt.dall-e-3' ,  message.data.fileBase64 );
-    if(  message.data.fileBase64 &&  message.data.fileBase64.length>0 ){
-       // promptMsg.opt={  images: message.fileBase64 }
-       try{
-            let images= await localSaveAny( JSON.stringify(  {fileName:["a.jpg"], fileBase64:[ message.data.fileBase64]} )  ) ;
-            mlog('key', images );
-            promptMsg.opt= {images:[images]}
-       }catch(e){
-           mlog('localSaveAny error',e);
-       }
-    }
-     addChat(  +uuid, promptMsg );
-  }else if( message.drawText){
-    let promptMsg: Chat.Chat= getInitChat(message.drawText)
-    
-    if( message.fileBase64 && message.fileBase64.length>0 ){
-       // promptMsg.opt={  images: message.fileBase64 }
-       try{
-            let images= await localSaveAny( JSON.stringify(  {fileName:["a.jpg"], fileBase64:[ message.data.fileBase64]} )  ) ;
-            mlog('key', images );
-            promptMsg.opt= {images:[images]}
-       }catch(e){
-           mlog('localSaveAny error',e);
-       }
-    }
-    addChat(  +uuid, promptMsg ); 
-  } 
+  }
   
 
 
