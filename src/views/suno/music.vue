@@ -46,9 +46,6 @@ initLoad();
          <n-tab-pane name="suno" tab="Suno"> 
             <McInput /> 
          </n-tab-pane>
-          <n-tab-pane name="udio" tab="Udio"> 
-            <udioInput/>
-         </n-tab-pane>
            
         </n-tabs>
     </div>
