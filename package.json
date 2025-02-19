@@ -1,9 +1,9 @@
 {
-  "name": "chatgpt-web-midjourney-proxy",
+  "name": "友AI工具箱2.0",
   "version": "2.23.3",
   "private": false,
-  "description": "ChatGPT Web Midjourney Proxy",
-  "author": "Dooy <ydlhero@gmail.com>",
+  "description": "友AI工具箱2.0",
+  "author": "Nexthubs",
   "keywords": [
     "chatgpt-web",
     "chatgpt",
