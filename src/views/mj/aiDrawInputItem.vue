@@ -348,7 +348,6 @@ const selectFile3=  (input:any)=>{
         <div class="w-[45px]">sref</div>
             <NInput v-model:value="f.sref" size="small" placeholder="图片url 生成风格一致的图像" clearable >
                  <template #suffix>
-                    <SvgIcon icon="ri:upload-line"  class="cursor-pointer" @click="uploader('sref')"></SvgIcon>
                 </template>
             </NInput>
         </section>
@@ -356,7 +355,6 @@ const selectFile3=  (input:any)=>{
         <div class="w-[45px]">cref</div>
             <NInput  v-model:value="f.cref" size="small" placeholder="图片url 生成角色一致的图像" clearable>
                 <template #suffix>
-                    <SvgIcon icon="ri:upload-line" class="cursor-pointer"  @click="uploader('cref')"></SvgIcon>
                 </template>
             </NInput>
         </section>
@@ -405,11 +403,7 @@ const selectFile3=  (input:any)=>{
                      </div>
                 </NPopover>
             </div>
-            <div class="pt-1" >
-                <n-tag type="success" round size="small" style="cursor: pointer; " :bordered="false" @click="shorten()"   >
-                     <div style="display: flex;">  <SvgIcon icon="game-icons:bouncing-spring" /> Shorten </div>
-                </n-tag>
-            </div>
+
 
         </div>
 
