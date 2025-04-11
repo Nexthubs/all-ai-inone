@@ -17,11 +17,6 @@ export const homeStore = reactive({
         ,is_luma_pro:false
         ,is_viggle_pro:false
        
-    },
-
-			// 新增方法
-    openWorkflow() {
-        window.open('https://flow.nexthubs.com', '_blank');
     }
    
     ,setMyData( v:object){
