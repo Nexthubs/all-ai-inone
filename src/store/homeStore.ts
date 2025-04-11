@@ -203,3 +203,9 @@ export const gptsUlistStore= reactive({
         return this;
     }
 });
+//增加打开函数
+methods: {
+  openWorkflow() {
+    window.open('https://folw.nexthubs.com', '_blank');
+  }
+}
