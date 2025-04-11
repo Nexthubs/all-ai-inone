@@ -139,7 +139,7 @@ const chatId= computed(()=>chatStore.active??'1002' );
                 <n-tooltip placement="right" trigger="hover">
                   <template #trigger> 
                     <div  class="flex  h-full justify-center items-center py-1 flex-col " :class="[ goHome =='realtime' ? 'active' : '']">
-                      <SvgIcon icon="ri:mic-fill" class="text-3xl flex-1"></SvgIcon>
+                      <SvgIcon icon="mdi:workflow" class="text-3xl flex-1"></SvgIcon>
                       <span class="text-[10px]">{{$t('mj.rttab')}}</span>
                     </div>  
                   </template>
