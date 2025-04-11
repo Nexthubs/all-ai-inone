@@ -22,7 +22,7 @@ export const homeStore = reactive({
 			// 新增方法
     openWorkflow() {
         window.open('https://flow.nexthubs.com', '_blank');
-    },
+    }
    
     ,setMyData( v:object){
         this.myData={...this.myData,...v}; 
