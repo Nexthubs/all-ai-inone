@@ -264,11 +264,7 @@ watch(()=>homeStore.myData.act, (n)=>{
 
     <div class="pt-4">
         <div class="flex justify-between items-start">
-            <div class=" space-x-1">
-                  <NTag v-if="st.type=='custom'" type="success" size="small" round  ><span class="cursor-pointer" @click="generateLyrics()" >{{ $t('suno.generately') }}</span></NTag>
-                  <!-- <NTag v-if="st.type=='custom'" type="success" size="small" round  ><span class="cursor-pointer" @click="generateLyrics()" >上传音频</span></NTag> -->
-                  <mcUploaderMp3 v-if="st.type=='custom'"/>
-            </div>
+
             <NButton type="primary" :disabled="!canPost" @click="generate()"><SvgIcon icon="ri:music-fill"  /> {{$t('suno.generate')}}</NButton> 
         </div>
         
