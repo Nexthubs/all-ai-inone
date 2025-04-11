@@ -18,7 +18,12 @@ export const homeStore = reactive({
         ,is_viggle_pro:false
        
     }
-    
+
+			// 新增方法
+    openWorkflow() {
+        window.open('https://flow.nexthubs.com', '_blank');
+    },
+   
     ,setMyData( v:object){
         this.myData={...this.myData,...v}; 
         if( Object.keys(v).indexOf('act')>-1){ 
@@ -203,9 +208,3 @@ export const gptsUlistStore= reactive({
         return this;
     }
 });
-//增加打开函数
-methods: {
-  openWorkflow() {
-    window.open('https://folw.nexthubs.com', '_blank');
-  }
-}
