@@ -160,11 +160,11 @@ export default {
     ,prompt:'提示词'
     ,imgCYes:'含有垫图'
     ,imgCUpload:'自传垫图'
-    ,imgCInfo:'垫图说明：<br/> 1.垫图可使用自己的图片作为基础，让MJ来绘图<br/> 2.可以使用多张垫图 最多5张， 单张图片不超过1M<br/>'
+    ,imgCInfo:'垫图说明：<br/> 1.使用自己的图片作为基础，单张图片不能超过1MB<br/> 2.可以使用多张垫图 最多5张<br/>'
     ,imgCadd:'+添加'
     ,del:'删除'
     ,img2text:'图生文'
-    ,img2textinfo:'不知如何写提示词？用图生文试试！<br/>提交图片，出提示词'
+    ,img2textinfo:'不知如何写提示词？用图生文试试！<br/>单张图片不能超过1MB'
     ,traning:'翻译中...'
     ,imgcreate:'生成图片'
     ,imginfo:'其他参数：  <li>1 --no 忽略 --no car 图中不出现车 </li><li>2 --seed 可先获取种子 --seed 123456 </li> <li>3 --chaos 10 混合(范围：0-100)</li> <li>4 --tile 碎片化 </li>  <li>5 --cw 0 只参考五官, 100 参考五官、头发、服装等  </li>'
@@ -537,8 +537,8 @@ export default {
 
   }
   ,dance:{
-    menu:"舞蹈",
-    menuinfo:'Viggle等 舞蹈视频创作'
+    menu:"工作流",
+    menuinfo:'自动化工作流'
     ,character:'人物角色'
     ,viggleabout:"Viggle 相关",
     viggleserver:"Viggle 接口地址",
