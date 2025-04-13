@@ -4,7 +4,7 @@
 <template>
   <div class="w-full h-full">
     <iframe 
-      src="https://flow.nexthubs.cn/workflow" 
+      src="https://flow.nexthubs.cn" 
       frameborder="0" 
       class="w-full h-full"
     ></iframe>
