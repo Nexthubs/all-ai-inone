@@ -140,7 +140,7 @@ const chatId= computed(()=>chatStore.active??'1002' );
 
 <!--   打开新的窗口<a v-if="!isDisableMenu ( 'realtime')"   @click="openExternalLink('https://flow.nexthubs.cn')"  -->
 						
-             <a v-if="!isDisableMenu ( 'realtime')"   @click="homeStore.setMyData({act:'openRealtime'}) "  
+             <a v-if="!isDisableMenu ( 'realtime')"   @click="st.active='realtime'; urouter.push('/realtime')"  
                 class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
                 <n-tooltip placement="right" trigger="hover">
                   <template #trigger> 
