@@ -149,7 +149,7 @@ const serverSuccess=(s:any)=>{
        </div>
        <div class=" pl-2" > 
         <!-- <NButton type="primary" @click="saveChat('no')" size="small" >{{ $t('mj.server_load') }}</NButton> -->
-        <AiModelServer @success="serverSuccess"/>
+
         <!-- <n-popselect
                 v-model:value="st.server"
                 :options="serverOptions"
@@ -248,9 +248,7 @@ const serverSuccess=(s:any)=>{
 
 
 </template>
-<div v-else class="text-right cursor-pointer mb-4" @click="st.openMore=true">
-    <NTag  type="primary" round size="small" :bordered="false" class="!cursor-pointer">More...</NTag>
-</div>
+
 
  <section class=" text-right flex justify-end space-x-2"  >
     <NButton   @click="reSet()">{{ $t('mj.setBtBack') }}</NButton>
