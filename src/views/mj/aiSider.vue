@@ -10,10 +10,7 @@ import { router } from '@/router'
 import { isDisableMenu } from "@/api";
 import { useRouter } from "vue-router";
 
-// 创建一个打开新窗口的函数
-const openExternalLink = (url: string) => {
-  window.open(url, '_blank')
-}
+
 //import gallery from '@/views/gallery/index.vue'
 
 const chatStore = useChatStore()
@@ -42,6 +39,39 @@ const goHome =computed(  () => {
 // }
 //mlog('g', goHome() );
 const chatId= computed(()=>chatStore.active??'1002' );
+
+// 通过发布自定义事件来刷新流程图 iframe
+const refreshFlowIframe = () => {
+  // 创建一个自定义事件，可被 flow 组件监听
+  const refreshEvent = new CustomEvent('refresh-flow-iframe');
+  window.dispatchEvent(refreshEvent);
+  
+  // 备用方案：如果自定义事件不起作用，可以使用全页面刷新
+  // window.location.reload();
+}
+
+// 处理dance菜单点击
+const handleDanceClick = () => {
+  st.value.active = 'flow';
+  
+  // 检查当前是否已在 flow 路由
+  const isAlreadyOnFlowRoute = router.currentRoute.value.path === '/flow';
+  
+  if (isAlreadyOnFlowRoute) {
+    // 如果已经在 flow 路由，直接刷新
+    refreshFlowIframe();
+  } else {
+    // 如果不在 flow 路由，先导航过去，然后刷新
+    urouter.push('/flow');
+    // 等待路由变化完成后刷新
+    nextTick(() => {
+      setTimeout(() => {
+        refreshFlowIframe();
+      }, 100);
+    });
+  }
+}
+
 </script>
 <template>
 <div class="flex-shrink-0 w-[60px] z-[1000]  h-full" v-if="!isMobile" data-tauri-drag-region>
@@ -125,11 +155,11 @@ const chatId= computed(()=>chatStore.active??'1002' );
             </a>
 
 
-            <a v-if="!isDisableMenu ( 'dance')"      @click="st.active='flow'; urouter.push('/flow')" 
-                class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
+           <a v-if="!isDisableMenu('dance')" @click="handleDanceClick()" 
+                class="router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
                 <n-tooltip placement="right" trigger="hover">
                   <template #trigger> 
-                    <div  class="flex  h-full justify-center items-center py-1 flex-col " :class="[ goHome =='dance' ? 'active' : '']">
+                    <div class="flex h-full justify-center items-center py-1 flex-col " :class="[ goHome =='dance' ? 'active' : '']">
                       <SvgIcon icon="mdi:workflow" class="text-3xl flex-1"></SvgIcon>
                       <span class="text-[10px]">{{ $t('dance.menu') }}</span>
                     </div>  
