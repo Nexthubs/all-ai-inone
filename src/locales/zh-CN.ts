@@ -175,7 +175,7 @@ export default {
     ,tQuality:'画质'
     ,tStyles:'艺术程度'
     ,tVersion:'模型版本'
-    ,dalleInfo:' 说明：   <li>1 dall-e 是openAi提供的画图模型</li>  <li>2 openAi的图片有时效性，请做好备份</li>   <li>3 注意：1790px的图片价格是双倍</li> '
+    ,dalleInfo:' 说明：   <li>1 dall-e 是openAi提供的画图模型</li>  <li>2 openAi的图片有时效性，请做好备份</li>   <li>3 注意：1790px的图片价格是双倍</li> <li>4 注意：dall-e-2、gpt-image-1 支持多图参考</li> '
     ,version:'版本'
     ,size:'尺寸'
     ,blendInfo:'说明： <li>1 合成至少2张图片</li> <li>2 最多可传6张图</li> '
@@ -368,7 +368,7 @@ export default {
     ,pixabout:'Pixverse 相关'
     ,pixkeyPlaceholder:'Pixverse 的API Key 可不填'
     ,pixserver:'Pixverse 接口地址'
-    ,pixinfo:' 说明：<br>  <ul> <li>1.以v3.5 360p 时长5s 模式 Normal 为基数</li><li>2.v2.5 是 0.5倍</li>  <li>3.时长8s 是 2倍</li> <li>4.540P 1.5倍 720P 2倍 1080P 4倍</li> <li>5.模式 performance 2倍</li> <li>6.倍数是相乘的 比如 720P 时长8s 那就是 2*2是4倍，如果再加performance 就是8倍</li></ul>'
+    ,pixinfo:' 说明：<br>  <ul> <li>1.以v3.5 360p 时长5s 模式 Normal 为基数</li><li>2.支持v4 v3.5 低版本不再支持</li>  <li>3.时长8s 是 2倍</li> <li>4.540P 1.5倍 720P 2倍 1080P 4倍</li> <li>5.模式 performance 2倍</li> <li>6.倍数是相乘的 比如 720P 时长8s 那就是 2*2是4倍，如果再加performance 就是8倍</li></ul>'
   
    ,server_load:'服务端获取'
    ,model_select:'模型选择'
@@ -565,7 +565,7 @@ export default {
     ,viggleabout:"Viggle 相关",
     viggleserver:"Viggle 接口地址",
     setOpenKeyPlaceholder:'Viggle API 的key, 可不填',
-    info:'说明:<br>1.角色图片最好是个人全身照片<br>2.舞蹈模版视频最好是个人视频 别传群舞',
+    info:'说明:<br>1.角色图片最好是个人全身照片<br>2.舞蹈模版视频最好是个人视频 别传群舞<br>3.生成会给出倍数价格 2电量 表示2倍的基础价格',
     model:'模型',
     bgw:'白色背景',
     bgg:'绿色背景',
