@@ -119,7 +119,21 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
-
+	
+  {
+    path: '/flow',
+    name: 'flow',
+    component: lumaLayout,
+    redirect: '/flow/index',
+    children: [
+      {
+        path: '/flow/:uuid?',
+        name: 'flow',
+        component: () => import('@/views/viggle/flow.vue'),
+      },
+    ],
+  },
+	
   {
     path: '/wav',
     name: 'wav',

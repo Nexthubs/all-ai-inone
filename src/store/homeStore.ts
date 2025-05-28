@@ -18,7 +18,7 @@ export const homeStore = reactive({
         ,is_viggle_pro:false
        
     }
-    
+   
     ,setMyData( v:object){
         this.myData={...this.myData,...v}; 
         if( Object.keys(v).indexOf('act')>-1){ 

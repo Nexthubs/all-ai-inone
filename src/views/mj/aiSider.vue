@@ -10,6 +10,10 @@ import { router } from '@/router'
 import { isDisableMenu } from "@/api";
 import { useRouter } from "vue-router";
 
+// 创建一个打开新窗口的函数
+const openExternalLink = (url: string) => {
+  window.open(url, '_blank')
+}
 //import gallery from '@/views/gallery/index.vue'
 
 const chatStore = useChatStore()
@@ -121,12 +125,12 @@ const chatId= computed(()=>chatStore.active??'1002' );
             </a>
 
 
-            <a v-if="!isDisableMenu ( 'dance')"      @click="st.active='dance'; urouter.push('/dance')" 
+            <a v-if="!isDisableMenu ( 'dance')"      @click="st.active='flow'; urouter.push('/flow')" 
                 class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
                 <n-tooltip placement="right" trigger="hover">
                   <template #trigger> 
                     <div  class="flex  h-full justify-center items-center py-1 flex-col " :class="[ goHome =='dance' ? 'active' : '']">
-                      <SvgIcon icon="mdi:dance-ballroom" class="text-3xl flex-1"></SvgIcon>
+                      <SvgIcon icon="mdi:workflow" class="text-3xl flex-1"></SvgIcon>
                       <span class="text-[10px]">{{ $t('dance.menu') }}</span>
                     </div>  
                   </template>
@@ -134,12 +138,14 @@ const chatId= computed(()=>chatStore.active??'1002' );
                 </n-tooltip>                
             </a>
 
-             <a v-if="!isDisableMenu ( 'realtime')"   @click="homeStore.setMyData({act:'openRealtime'}) "  
+<!--   打开新的窗口<a v-if="!isDisableMenu ( 'realtime')"   @click="openExternalLink('https://flow.nexthubs.cn')"  -->
+						
+             <a v-if="!isDisableMenu ( 'realtime')"   @click="st.active='wav'; urouter.push('/wav')"  
                 class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
                 <n-tooltip placement="right" trigger="hover">
                   <template #trigger> 
                     <div  class="flex  h-full justify-center items-center py-1 flex-col " :class="[ goHome =='realtime' ? 'active' : '']">
-                      <SvgIcon icon="ri:mic-fill" class="text-3xl flex-1"></SvgIcon>
+                      <SvgIcon icon="fluent:document-sparkle-20-filled" class="text-3xl flex-1"></SvgIcon>
                       <span class="text-[10px]">{{$t('mj.rttab')}}</span>
                     </div>  
                   </template>
@@ -154,9 +160,6 @@ const chatId= computed(()=>chatStore.active??'1002' );
         </div>
         <div class="flex flex-col  space-y-2 "> 
 
-            
-            <NAvatar  size="large"  round  :src="userInfo.avatar"   v-if="userInfo.avatar"  :fallback-src="defaultAvatar"
-             class=" cursor-pointer"  />
             
             <HoverButton>
                 <div class="text-xl text-[#4f555e] dark:text-white flex h-full justify-center items-center "  @click="st.show = true">

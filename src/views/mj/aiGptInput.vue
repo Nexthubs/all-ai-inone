@@ -296,21 +296,6 @@ watch(()=> homeStore.myData.vtoken ,  regCookie  )
                     <div v-else v-html="$t('mj.upImg')"> </div>
                     </n-tooltip>
                 </div>
-                <!-- <div  class=" relative; w-[22px]">
-                    <SvgIcon icon="bi:mic"  class="absolute bottom-[10px] left-[30px] cursor-pointer" @click="st.showMic=true"></SvgIcon>
-                </div> -->
-                <n-dropdown trigger="hover" :options="drOption" @select="handleSelectASR">
-                    <div  class=" relative; w-[22px]">
-                        <div class="absolute bottom-[14px] left-[31px]" v-if="st.micStart">
-                            <span class="relative flex h-3 w-3" >
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-400"></span>
-                            </span>
-                        </div>
-                        <!-- <SvgIcon icon="bi:mic"  class="absolute bottom-[10px] left-[55px] cursor-pointer" @click="goASR()"></SvgIcon> -->
-                        <SvgIcon icon="bi:mic"  class="absolute bottom-[10px] left-[30px] cursor-pointer"></SvgIcon>
-                    </div>
-                </n-dropdown>
                 
             </template>
             <template #suffix>
