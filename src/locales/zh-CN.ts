@@ -328,7 +328,7 @@ export default {
     ,kling:'可灵'
 
     ,rttab:'文件盒'
-    ,rtinfo:'工作流音视频输出文件'
+    ,rtinfo:'工作流输出文件'
     ,rtsetting:'请设置服务端，目前Realtime 仅支持远程服务；需本地服务请联系作者'
     ,rjcloded:'连接已断开'
     ,checkkey:'请检查 api key 是否正确'
