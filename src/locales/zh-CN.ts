@@ -25,7 +25,7 @@ export default {
     success: '操作成功',
     failed: '操作失败',
     verify: '验证',
-    unauthorizedTips: '未经授权，请先进行验证。',
+    unauthorizedTips: '尚未登录，请输入密码进行登录验证。',
     stopResponding: '停止响应',
   },
   chat: {
