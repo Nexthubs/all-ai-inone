@@ -423,11 +423,7 @@ const selectFile3=  (input:any)=>{
                      </div>
                 </NPopover>
             </div>
-            <div class="pt-1" >
-                <n-tag type="success" round size="small" style="cursor: pointer; " :bordered="false" @click="shorten()"   >
-                     <div style="display: flex;">  <SvgIcon icon="game-icons:bouncing-spring" /> Shorten </div>
-                </n-tag>
-            </div>
+
 
         </div>
 
