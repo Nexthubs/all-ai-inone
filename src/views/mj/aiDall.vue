@@ -193,4 +193,6 @@ const selectFile=(input:any)=>{
 .myblend{
     --my-blend-img-size:75px
 }
+
 </style>
+
