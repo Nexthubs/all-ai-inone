@@ -15,8 +15,8 @@ export function useLanguage() {
         setLocale('zh-CN')
         return zhCN 
       default:
-        setLocale('zh-CN')
-        return zhCN
+        setLocale('en-US')
+        return enUS
     }
   })
 
