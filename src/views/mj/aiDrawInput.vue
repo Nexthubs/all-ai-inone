@@ -55,7 +55,7 @@ initLoad();
     <n-tab-pane name="start" tab=""> 
 
     </n-tab-pane>
-    <n-tab-pane name="midjourney" tab="AI art generator" >
+    <n-tab-pane name="midjourney" tab="AI Art Generator" >
       <!--  -->
     <n-tabs type="segment" animated   default-value="draw23" size="small">
         <n-tab-pane name="draw23" :tab="$t('mjchat.draw')">
