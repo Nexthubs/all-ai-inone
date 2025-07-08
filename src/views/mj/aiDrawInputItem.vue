@@ -348,12 +348,12 @@ const selectFile3=  (input:any)=>{
     <!-- <template  >  </template> -->
         <section class="mb-4 flex justify-between items-center"  >
         <div  >cw(0-100)</div>
-        <NInputNumber :min="0" :max="100" v-model:value="f.cw" class="!w-[60%]" size="small" clearable placeholder="0-100 角色参考程度" />
+        <NInputNumber :min="0" :max="100" v-model:value="f.cw" class="!w-[60%]" size="small" clearable placeholder="0-100 reference level" />
         </section >
     
         <section class="mb-4 flex justify-between items-center"  >
         <div class="w-[45px]">sref</div>
-            <NInput v-model:value="f.sref" size="small" placeholder="输入风格参考图片url，或上传图片" clearable >
+            <NInput v-model:value="f.sref" size="small" placeholder="Input image URL, or upload an image" clearable >
                  <template #suffix>
                     <SvgIcon icon="ri:upload-line"  class="cursor-pointer" @click="uploader('sref')"></SvgIcon>
                 </template>
@@ -362,7 +362,7 @@ const selectFile3=  (input:any)=>{
 
         <section class="mb-4 flex justify-between items-center"  >
         <div class="w-[45px]">cref</div>
-            <NInput  v-model:value="f.cref" size="small" placeholder="输入角色参考图片url，或上传图片" clearable>
+            <NInput  v-model:value="f.cref" size="small" placeholder="Input image URL, or upload an image" clearable>
                 <template #suffix>
                     <SvgIcon icon="ri:upload-line" class="cursor-pointer"  @click="uploader('cref')"></SvgIcon>
                 </template>
@@ -372,7 +372,7 @@ const selectFile3=  (input:any)=>{
 
         <section class="mb-4 flex justify-between items-center"  >
         <div class="w-[45px]">oref</div>
-            <NInput  v-model:value="f.oref" size="small" placeholder="输入主体参考图片url，或上传图片" clearable>
+            <NInput  v-model:value="f.oref" size="small" placeholder="Input image URL, or upload an image" clearable>
                 <template #suffix>
                     <SvgIcon icon="ri:upload-line" class="cursor-pointer"  @click="uploader('oref')"></SvgIcon>
                 </template>
