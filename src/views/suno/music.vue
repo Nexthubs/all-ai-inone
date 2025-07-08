@@ -43,7 +43,7 @@ initLoad();
             <McInput /> 
          </n-tab-pane>
 
-         <n-tab-pane name="suno" tab="音乐生成"> 
+         <n-tab-pane name="suno" tab="AI Music Generator"> 
             <McInput /> 
          </n-tab-pane>
            
