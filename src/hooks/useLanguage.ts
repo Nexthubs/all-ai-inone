@@ -11,27 +11,9 @@ export function useLanguage() {
       case 'en-US':
         setLocale('en-US')
         return enUS
-      case 'ru-RU':
-        setLocale('ru-RU')
-        return enUS
-      case 'ko-KR':
-        setLocale('ko-KR')
-        return koKR
       case 'zh-CN':
         setLocale('zh-CN')
-        return zhCN
-      case 'zh-TW':
-        setLocale('zh-TW')
-        return zhTW
-      case 'vi-VN':
-        setLocale('vi-VN')
-        return zhTW
-      case 'fr-FR':
-        setLocale('fr-FR')
-        return enUS
-      case 'tr-TR':
-        setLocale('tr-TR')
-        return enUS  
+        return zhCN 
       default:
         setLocale('zh-CN')
         return zhCN
