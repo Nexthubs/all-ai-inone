@@ -20,7 +20,7 @@ export function defaultSetting(): UserState {
     userInfo: {
       avatar: 'https://www.nexthubs.cn/upload/avatar.png',
       name:  t('mjset.sysname'),//'AI绘图',
-      description: 'Nexthubs <a href="https://ai.nexthubs.com" class="text-blue-500" target="_blank" >友AI工具箱</a>',
+      description: 'Nexthubs <a href="https://ai.nexthubs.com" class="text-blue-500" target="_blank" >AI Toolbox</a>',
     },
   }
 }
