@@ -36,7 +36,7 @@ onUnmounted(() => {
   <div class="w-full h-full">
     <iframe 
       ref="iframeRef"
-      src="https://flow.nexthubs.com" 
+      src="https://workflow.nexthubs.com" 
       frameborder="0" 
       class="w-full h-full"
     ></iframe>
