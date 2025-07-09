@@ -57,13 +57,7 @@ const themeOptions: { label: string; key: Theme; icon: string }[] = [
 
 const languageOptions: { label: string; key: Language; value: Language }[] = [
   { label: '简体中文', key: 'zh-CN', value: 'zh-CN' },
-  { label: '繁體中文', key: 'zh-TW', value: 'zh-TW' },
   { label: 'English', key: 'en-US', value: 'en-US' },
-  { label: '한국어', key: 'ko-KR', value: 'ko-KR' },
-  { label: 'Русский язык', key: 'ru-RU', value: 'ru-RU' },
-  { label: 'Tiếng Việt', key: 'vi-VN', value: 'vi-VN' },
-  { label: 'Français', key: 'fr-FR', value: 'fr-FR' },
-  { label: 'Türkçe', key: 'tr-TR', value: 'tr-TR' },
 ]
 
 function updateUserInfo(options: Partial<UserInfo>) {
@@ -147,24 +141,7 @@ function handleImportButtonClick(): void {
           {{ $t('common.save') }}
         </NButton>
       </div>
-      <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[100px]">{{ $t('setting.backgroundImage') }}</span>
-        <div class="w-[200px]">
-          <NInput v-model:value="backgroundImage" placeholder="" />
-        </div>
-        <NButton size="tiny" text type="primary" @click="updateUserInfo({ backgroundImage })">
-          {{ $t('common.save') }}
-        </NButton>
-      </div>
-      <div class="flex items-center space-x-4">
-        <span class="flex-shrink-0 w-[100px]">{{ $t('setting.description') }}</span>
-        <div class="flex-1">
-          <NInput v-model:value="description" placeholder="" />
-        </div>
-        <NButton size="tiny" text type="primary" @click="updateUserInfo({ description })">
-          {{ $t('common.save') }}
-        </NButton>
-      </div>
+
       <div
         class="flex items-center space-x-4"
         :class="isMobile && 'items-start'"
