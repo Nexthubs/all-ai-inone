@@ -284,7 +284,7 @@ export default {
   "mjtab": {
     "chat": "Chat",
     "draw": "Drawing",
-    "drawinfo": "AI Drawing with Midjourney Engine",
+    "drawinfo": "AI Art Generator",
     "gallery": "Gallery",
     "galleryInfo": "My Gallery"
   },
@@ -482,7 +482,7 @@ export default {
     "nodata": "Please compose first to have a list of songs",
 
     "menu": "Music",
-    "menuinfo": "Suno Music Creation",
+    "menuinfo": "AI Music Generator",
     "server": "Suno API Endpoint",
     "serverabout": "Suno Related",
     "setOpenKeyPlaceholder": "Related KEY for Suno API; optional"
@@ -531,7 +531,7 @@ export default {
   },
   dance:{
     menu: "Workflow",
-    menuinfo: "Create dance videos with Viggle and others.",
+    menuinfo: "Flexible AI workflow",
     character: "Character",
     viggleabout: "About Viggle",
     viggleserver: "Viggle API Endpoint",
