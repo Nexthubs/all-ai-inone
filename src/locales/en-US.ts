@@ -224,7 +224,7 @@ export default {
   ,kling:'Kling'
 
   ,rttab: 'Documents',
-  rtinfo: 'Realtime voice conversation service',
+  rtinfo: 'Workflow generated documents',
   rtsetting: 'Please set the server. Currently, Realtime only supports remote services; for local services, please contact the author.',
   rjcloded: 'Connection has been disconnected',
   checkkey: 'Please check if the API key is correct',
@@ -531,7 +531,7 @@ export default {
   },
   dance:{
     menu: "Workflow",
-    menuinfo: "Create dance videos with Viggle and others.",
+    menuinfo: "Work with AI workflow.",
     character: "Character",
     viggleabout: "About Viggle",
     viggleserver: "Viggle API Endpoint",
