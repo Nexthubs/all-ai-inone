@@ -414,18 +414,6 @@ const selectFile3=  (input:any)=>{
             </NInput>
         </section>
 
-        <section class="mb-4 flex justify-between items-center"  >
-          <div >视频</div>
-          <n-select v-model:value="f.videoBs" :options="bsOption" size="small"  class="!w-[60%]" :clearable="true" />
-        </section>
-        <section class="mb-4 flex justify-between items-center" v-if="f.videoBs>0" >
-        <div class="w-[45px]">Video</div>
-            <NInput  v-model:value="f.vidoeImage" size="small" placeholder="视频参考 url" clearable>
-                <template #suffix>
-                    <SvgIcon icon="ri:upload-line" class="cursor-pointer"  @click="uploader('vidoeImage')"></SvgIcon>
-                </template>
-            </NInput>
-        </section>
 
             
       </n-collapse-item>
