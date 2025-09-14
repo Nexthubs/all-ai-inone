@@ -223,7 +223,7 @@ export default {
   "left_turn_forward": "Turn Left and Push Forward"
   ,kling:'Kling'
 
-  ,rttab: 'RealTime',
+  ,rttab: 'Documents',
   rtinfo: 'Realtime voice conversation service',
   rtsetting: 'Please set the server. Currently, Realtime only supports remote services; for local services, please contact the author.',
   rjcloded: 'Connection has been disconnected',
@@ -265,12 +265,21 @@ export default {
   "pixinfo": " Description:<br> <ul> <li>1. Based on v3.5 360p duration 5s mode Normal</li><li>2. v2.5 is 0.5 times</li> <li>3. Duration 10s is 2 times</li> <li>4. 540P is 1.5 times, 720P is 2 times, 1080P is 4 times</li> <li>5. Mode performance is 2 times</li> <li>6. The multiples are multiplied, for example, 720P duration 10s is 2*2 which is 4 times, and if performance is added, it becomes 8 times</li></ul>"
    ,server_load:'Server Pull'
    ,model_select:'Model Selecte'
+
+   ,riffabout:'About Riffusion'
+   ,riffkeyPlaceholder:'Riffusion API Key can be left blank'
+   ,riffserver:'Riffusion API address'
+   ,riffinfo:'Riffusion Description'
+
+   ,editImage:'Image Edit'
+   ,editVideo:'Image2Video'
+   ,moreset:'More Parameters'
   },
   "mjset": {
     "server": "Server",
     "about": "About",
     "model": "Model",
-    "sysname": "AI Drawing"
+    "sysname": "AI Toolbox"
   },
   "mjtab": {
     "chat": "Chat",
@@ -521,7 +530,7 @@ export default {
 
   },
   dance:{
-    menu: "Dance",
+    menu: "Workflow",
     menuinfo: "Create dance videos with Viggle and others.",
     character: "Character",
     viggleabout: "About Viggle",
