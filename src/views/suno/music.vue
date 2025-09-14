@@ -45,14 +45,8 @@ initLoad();
             <McInput /> 
          </n-tab-pane>
 
-         <n-tab-pane name="suno" tab="Suno"> 
+         <n-tab-pane name="suno" tab="音乐生成"> 
             <McInput /> 
-         </n-tab-pane>
-         <n-tab-pane name="riff" tab="Riffusion"> 
-            <RiffInput/>
-         </n-tab-pane>
-         <n-tab-pane name="udio" tab="Udio"> 
-            <udioInput/>
          </n-tab-pane>
            
         </n-tabs>

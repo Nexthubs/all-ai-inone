@@ -25,13 +25,13 @@ export default {
     success: '操作成功',
     failed: '操作失败',
     verify: '验证',
-    unauthorizedTips: '未经授权，请先进行验证。',
+    unauthorizedTips: '尚未登录，请输入密码进行登录验证。',
     stopResponding: '停止响应',
   },
   chat: {
     newChatButton: '新建聊天',
     //placeholder: '来说点什么吧...（Shift + Enter = 换行，"/" 触发提示词）',
-    placeholder: '可输入说点什么，也可贴截图或拖拽文件（Shift + Enter = 换行，"/" 触发提示词）',
+    placeholder: '可输入点什么，也可贴截图或拖拽文件（Shift + Enter = 换行，"/" 触发提示词）',
     placeholderMobile: '来说点什么...',
     copy: '复制',
     copied: '复制成功',
@@ -77,7 +77,7 @@ export default {
     monthlyUsage: '本月使用量',
   },
   store: {
-    siderButton: '提示词商店',
+    siderButton: '提示词库',
     local: '本地',
     online: '在线',
     title: '标题',
@@ -100,13 +100,13 @@ export default {
     server:'服务端'
     ,about:'关于'
     ,model:'模型'
-    ,sysname:'AI绘图'
+    ,sysname:'友AI工具箱2.0'
   }
 
   ,mjtab:{
     chat:'对话'
     ,draw:'绘画'
-    ,drawinfo:'AI绘画 Midjourney引擎'
+    ,drawinfo:'AI绘画'
     ,gallery:'画廊'
     ,galleryInfo:'我的画廊'
   }
@@ -160,11 +160,11 @@ export default {
     ,prompt:'提示词'
     ,imgCYes:'含有垫图'
     ,imgCUpload:'自传垫图'
-    ,imgCInfo:'垫图说明：<br/> 1.垫图可使用自己的图片作为基础，让MJ来绘图<br/> 2.可以使用多张垫图 最多5张， 单张图片不超过1M<br/>'
+    ,imgCInfo:'垫图说明：<br/> 1.使用自己的图片作为基础，单张图片不能超过1MB<br/> 2.可以使用多张垫图 最多5张<br/>'
     ,imgCadd:'+添加'
     ,del:'删除'
     ,img2text:'图生文'
-    ,img2textinfo:'不知如何写提示词？用图生文试试！<br/>提交图片，出提示词'
+    ,img2textinfo:'不知如何写提示词？用图生文试试！<br/>单张图片不能超过1MB'
     ,traning:'翻译中...'
     ,imgcreate:'生成图片'
     ,imginfo:'其他参数：  <li>1 --no 忽略 --no car 图中不出现车 </li><li>2 --seed 可先获取种子 --seed 123456 </li> <li>3 --chaos 10 混合(范围：0-100)</li> <li>4 --tile 碎片化 </li>  <li>5 --cw 0 只参考五官, 100 参考五官、头发、服装等  </li>'
@@ -229,7 +229,7 @@ export default {
     ,uploadSuccess:'上传成功'
     ,uploadFail:'上传失败:'
     ,upPdf:'<span>上传图片、附件<br/>能上传图片、PDF、EXCEL等文档</span><p>支持拖拽</p>'
-    ,upImg:'<span><b>上传图片</b><br/>会自动调用 gpt-4-vision-preview 模型<br>注意：会有额外的图片费用<br/>格式: jpeg jpg png gif</span><p>支持拖拽</p> <p class="pt-2"><b>上传MP3 MP4</b> <br>会自动直接调用 whisper-1 模型<br>格式有：mp3 mp4 mpeg mpga m4a wav webm</p>'
+    ,upImg:'<span><b>上传图片</b><br/>格式: jpeg jpg png gif</span><p>支持拖拽</p> <p class="pt-2"><b>上传MP3 MP4</b> <br>格式有：mp3 mp4 mpeg mpga m4a wav webm</p>'
     ,clearAll:'清参数'
     ,czoom:'自定义'
     ,customTitle:'自定义变焦'
@@ -327,8 +327,8 @@ export default {
 
     ,kling:'可灵'
 
-    ,rttab:'语音'
-    ,rtinfo:'实时语音对话服务(realtime)'
+    ,rttab:'文件盒'
+    ,rtinfo:'工作流输出文件'
     ,rtsetting:'请设置服务端，目前Realtime 仅支持远程服务；需本地服务请联系作者'
     ,rjcloded:'连接已断开'
     ,checkkey:'请检查 api key 是否正确'
@@ -360,7 +360,7 @@ export default {
     ,ud_continuation:"后扩展"
     ,ud_precede:"前扩展"
 
-    ,upImg2:'<span><b>上传图片</b><br/>该模型支持识图<br>注意：会有额外的图片费用<br/>格式: jpeg jpg png gif</span><p>支持拖拽</p> <p class="pt-2"><b>上传MP3 MP4</b> <br>会自动直接调用 whisper-1 模型<br>格式有：mp3 mp4 mpeg mpga m4a wav webm</p>'
+    ,upImg2:'<span><b>上传图片</b><br/>该模型支持识图<br/>格式: jpeg jpg png gif</span><p>支持拖拽</p>'
     ,rml_info:'注意：<ul><li>1.必须带图</li><li>2.模型支持 gen3a_turbo、gen4_turbo </li><li>3.10s的价格是5s的双倍</li><li>4.gen4_turbo 支持的ratio 比例类型更多</li></ul>'
     ,rml_heng:'横屏'
     ,rml_shu:'竖屏'
@@ -495,7 +495,7 @@ export default {
     ,nodata:'请先创作才有歌曲列表'
 
     ,menu:'音乐'
-    ,menuinfo:'Suno、Udio等音乐创作'
+    ,menuinfo:'AI音乐创作'
     ,server:'Suno 接口地址'
     ,serverabout:'Suno 相关'
     ,setOpenKeyPlaceholder:'Suno API 的相关KEY；可不填'
@@ -546,8 +546,30 @@ export default {
 
   }
   ,dance:{
-    menu:"舞蹈",
-    menuinfo:'Viggle等 舞蹈视频创作'
+    menu:"工作流",
+    menuinfo:'自动化工作流'
+    ,character:'人物角色'
+    ,viggleabout:"Viggle 相关",
+    viggleserver:"Viggle 接口地址",
+    setOpenKeyPlaceholder:'Viggle API 的key, 可不填',
+    info:'说明:<br>1.角色图片最好是个人全身照片<br>2.舞蹈模版视频最好是个人视频 别传群舞',
+    model:'模型',
+    bgw:'白色背景',
+    bgg:'绿色背景',
+    bgmoban:'模版背景',
+    bgrole:'角色背景',
+    gring:'生成中...',
+    uprolefirst:'请先上传角色图片',
+    uprolefail:'上传失败',
+    upvideo:'+上传模版舞蹈视频',
+    usevideo:'+使用官网模版',
+    moban:'舞蹈模版',
+    moban2:'模版名称',
+    use:'使用',
+  }
+  ,flow:{
+    menu:"工作流",
+    menuinfo:'自动化工作流'
     ,character:'人物角色'
     ,viggleabout:"Viggle 相关",
     viggleserver:"Viggle 接口地址",
@@ -567,6 +589,5 @@ export default {
     moban2:'模版名称',
     use:'使用',
   }
-
 
 }
