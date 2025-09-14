@@ -490,25 +490,13 @@ const selectFile3=  (input:any)=>{
         <div @click="copy2()"  >复制2</div>
     </div> -->
 
-  <n-divider dashed title-placement="right">Other</n-divider>
-  <div class="flex justify-start items-center space-x-2">
-        <n-tag type="primary" round size="small" style="cursor: pointer; " :bordered="false" @click="uploader('editVideo')"   >
-            <div  class="flex">  <SvgIcon icon="ri:video-add-line" /> {{ $t('mj.editVideo') }} </div>
-        </n-tag>
-        <n-tag type="primary" round size="small" style="cursor: pointer; " :bordered="false" @click="uploader('editImage')"   >
-            <div  class="flex">  <SvgIcon icon="mdi:file-chart-check-outline" /> {{ $t('mj.editImage') }} </div>
-        </n-tag>
-  </div>
 
    <ul class="pt-4"  v-if="!isMobile" v-html="$t('mjchat.imginfo')"></ul>
 
 
 </div>
 
-<NModal v-model:show="mst.isShow"   preset="card"  :title=" mst.type=='editVideo'?$t('mj.editVideo'):$t('mj.editImage')" style="max-width: 800px;" @close="mst.isShow=false">
-        <AiEditVidoe :img="mst.base64" @success="mst.isShow=false"  v-if="mst.isShow && mst.type=='editVideo'"   />
-        <AiEditImage :img="mst.base64" @success="mst.isShow=false"  v-if="mst.isShow && mst.type=='editImage'"   />
-</NModal>
+
 
 </template>
 <style>
