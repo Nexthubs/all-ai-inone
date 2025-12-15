@@ -29,11 +29,11 @@ const cs= ref({
 });
 
 const mvOption= [
-{label: 'verion: v3.5',value: 'chirp-v3-5'}
-,{label:'verion: v3',value: 'chirp-v3-0'}
-,{label:'verion: v4',value: 'chirp-v4'}
-,{label:'verion: v4.5',value: 'chirp-auk'}
-,{label:'verion: v4.5+',value: 'chirp-bluejay'}
+{label: 'version: v3.5',value: 'chirp-v3-5'}
+,{label:'version: v3',value: 'chirp-v3-0'}
+,{label:'version: v4',value: 'chirp-v4'}
+,{label:'version: v4.5',value: 'chirp-auk'}
+,{label:'version: v4.5+',value: 'chirp-bluejay'}
  ]
 
 const canPost = computed(() => {
