@@ -32,6 +32,7 @@ const bsOption=[
 ];
 const f=ref({bili:-1, quality:'',view:'',light:'',shot:'',style:'', styles:'',version:'--v 7.0'
 ,sref:'',cref:'',cw:'',oref:'',vidoeImage:'',videoBs:0 });
+
 const st =ref({text:'',isDisabled:false,isLoad:false
     ,fileBase64:[],bot:'',showFace:false,upType:''
 });
@@ -387,7 +388,7 @@ const selectFile3=  (input:any)=>{
     
         <section class="mb-4 flex justify-between items-center"  >
         <div class="w-[45px]">sref</div>
-            <NInput v-model:value="f.sref" size="small" placeholder="图片url 生成风格一致的图像" clearable >
+            <NInput v-model:value="f.sref" size="small" placeholder="输入风格参考图片url，或上传图片" clearable >
                  <template #suffix>
                     <SvgIcon icon="ri:upload-line"  class="cursor-pointer" @click="uploader('sref')"></SvgIcon>
                 </template>
@@ -396,7 +397,7 @@ const selectFile3=  (input:any)=>{
 
         <section class="mb-4 flex justify-between items-center"  >
         <div class="w-[45px]">cref</div>
-            <NInput  v-model:value="f.cref" size="small" placeholder="图片url 生成角色一致的图像" clearable>
+            <NInput  v-model:value="f.cref" size="small" placeholder="输入角色参考图片url，或上传图片" clearable>
                 <template #suffix>
                     <SvgIcon icon="ri:upload-line" class="cursor-pointer"  @click="uploader('cref')"></SvgIcon>
                 </template>
@@ -406,25 +407,13 @@ const selectFile3=  (input:any)=>{
 
         <section class="mb-4 flex justify-between items-center"  >
         <div class="w-[45px]">oref</div>
-            <NInput  v-model:value="f.oref" size="small" placeholder="图片url 全向参考的图像" clearable>
+            <NInput  v-model:value="f.oref" size="small" placeholder="输入主体参考图片url，或上传图片" clearable>
                 <template #suffix>
                     <SvgIcon icon="ri:upload-line" class="cursor-pointer"  @click="uploader('oref')"></SvgIcon>
                 </template>
             </NInput>
         </section>
 
-        <section class="mb-4 flex justify-between items-center"  >
-          <div >视频</div>
-          <n-select v-model:value="f.videoBs" :options="bsOption" size="small"  class="!w-[60%]" :clearable="true" />
-        </section>
-        <section class="mb-4 flex justify-between items-center" v-if="f.videoBs>0" >
-        <div class="w-[45px]">Video</div>
-            <NInput  v-model:value="f.vidoeImage" size="small" placeholder="视频参考 url" clearable>
-                <template #suffix>
-                    <SvgIcon icon="ri:upload-line" class="cursor-pointer"  @click="uploader('vidoeImage')"></SvgIcon>
-                </template>
-            </NInput>
-        </section>
 
             
       </n-collapse-item>
@@ -474,11 +463,7 @@ const selectFile3=  (input:any)=>{
                      </div>
                 </NPopover>
             </div>
-            <div class="pt-1" >
-                <n-tag type="success" round size="small" style="cursor: pointer; " :bordered="false" @click="shorten()"   >
-                     <div style="display: flex;">  <SvgIcon icon="game-icons:bouncing-spring" /> Shorten </div>
-                </n-tag>
-            </div>
+
 
         </div>
 

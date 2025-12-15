@@ -223,8 +223,8 @@ export default {
   "left_turn_forward": "Turn Left and Push Forward"
   ,kling:'Kling'
 
-  ,rttab: 'RealTime',
-  rtinfo: 'Realtime voice conversation service',
+  ,rttab: 'Documents',
+  rtinfo: 'Workflow generated documents',
   rtsetting: 'Please set the server. Currently, Realtime only supports remote services; for local services, please contact the author.',
   rjcloded: 'Connection has been disconnected',
   checkkey: 'Please check if the API key is correct',
@@ -279,7 +279,7 @@ export default {
     "server": "Server",
     "about": "About",
     "model": "Model",
-    "sysname": "AI Drawing"
+    "sysname": "AI Toolbox"
   },
   "mjtab": {
     "chat": "Chat",
@@ -530,8 +530,8 @@ export default {
 
   },
   dance:{
-    menu: "Dance",
-    menuinfo: "Create dance videos with Viggle and others.",
+    menu: "Workflow",
+    menuinfo: "Work with AI workflow.",
     character: "Character",
     viggleabout: "About Viggle",
     viggleserver: "Viggle API Endpoint",
