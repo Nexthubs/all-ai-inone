@@ -34,6 +34,7 @@ const mvOption= [
 ,{label:'version: v4',value: 'chirp-v4'}
 ,{label:'version: v4.5',value: 'chirp-auk'}
 ,{label:'version: v4.5+',value: 'chirp-bluejay'}
+,{label:'version: v5',value: 'chirp-crow'}
  ]
 
 const canPost = computed(() => {
