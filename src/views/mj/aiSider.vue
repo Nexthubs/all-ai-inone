@@ -88,17 +88,6 @@ const handleDanceClick = () => {
                 AI Chat
                 </n-tooltip>
             </a> 
-            <a  v-if="!isDisableMenu ( 'gpts')"   @click="homeStore.setMyData({act:'showgpts'}) " class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
-                <n-tooltip placement="right" trigger="hover">
-                  <template #trigger> 
-                    <div  class="flex h-full justify-center items-center   py-1 flex-col" >
-                    <SvgIcon icon="ri:apps-fill" class="text-3xl flex-1"></SvgIcon>
-                     <span class="text-[10px]">GPTs</span>
-                    </div> 
-                  </template>
-                    ChatGPT Store 
-                </n-tooltip>
-            </a>
 
 
             <a v-if="!isDisableMenu ( 'draws')"  @click="st.active='draw'; urouter.push(`/draw`)" class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
@@ -114,18 +103,6 @@ const handleDanceClick = () => {
             </a>
 
 
-
-             <a  v-if="!isDisableMenu ( 'gallery')"  @click="homeStore.setMyData({act:'gallery'}) " class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
-                <n-tooltip placement="right" trigger="hover">
-                  <template #trigger> 
-                    <div  class="flex h-full justify-center items-center   py-1 flex-col" >
-                    <SvgIcon icon="material-symbols:imagesmode-outline" class="text-3xl flex-1"></SvgIcon>
-                     <span class="text-[10px]">{{$t('mjtab.gallery')}}</span>
-                    </div> 
-                  </template>
-                    {{ $t('mjtab.galleryInfo') }}
-                </n-tooltip>
-            </a>
 
 
             <a v-if="!isDisableMenu ( 'music')"      @click="st.active='music'; urouter.push('/music')" class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]"
