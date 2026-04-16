@@ -9,7 +9,11 @@ import aiDrawInput from './aiDrawInput.vue';
 import {NDrawerContent,NDrawer} from "naive-ui";
 import { isDisableMenu } from '@/api';
 const st= ref({show:true})
-
+	
+// 创建一个打开新窗口的函数
+const openExternalLink = (url: string) => {
+  window.open(url, '_blank')
+}
 const goHome =computed(  () => {
   //router.push('/')
   return router.currentRoute.value.name
@@ -40,16 +44,6 @@ const urouter = useRouter() //
         <SvgIcon icon="ri:wechat-line" class="text-3xl"></SvgIcon>
         <div class="text-[13px]">{{$t('mjtab.chat')}}</div>
       </div>
-      <div  v-if="!isDisableMenu ( 'gpts')"  class="flex items-center justify-center flex-col "  @click="homeStore.setMyData({act:'showgpts'}) " >
-        <SvgIcon icon="ri:apps-fill" class="text-3xl"></SvgIcon>
-        <div class="text-[13px]">GPTs</div>
-      </div>
-
-      <div v-if="!isDisableMenu ( 'realtime')"    class="flex items-center justify-center flex-col "  @click="homeStore.setMyData({act:'openRealtime'}) " >
-        <SvgIcon icon="ri:mic-fill" class="text-3xl"></SvgIcon>
-        <div class="text-[13px]">{{$t('mj.rttab')}}</div>
-      </div>
-
 
       <div v-if="!isDisableMenu ( 'draws')" class="flex items-center justify-center flex-col "  @click="homeStore.setMyData({act:'showDraw'}) " :class="[goHome=='draw' ? 'active' : '']" >
         <SvgIcon icon="ic:outline-palette" class="text-3xl"></SvgIcon>
@@ -60,6 +54,17 @@ const urouter = useRouter() //
         <SvgIcon icon="arcticons:wynk-music" class="text-3xl"></SvgIcon>
         <div class="text-[13px]">{{ $t('suno.menu') }}</div>
       </div>
+		
+      <div  v-if="!isDisableMenu ( 'dance')"  class="flex items-center justify-center flex-col "  @click="urouter.push('/flow')"  :class="[ goHome =='dance' ? 'active' : '']" >
+        <SvgIcon icon="mdi:workflow" class="text-3xl"></SvgIcon>
+        <div class="text-[13px]">工作流</div>
+      </div>
+
+      <div v-if="!isDisableMenu ( 'realtime')"    class="flex items-center justify-center flex-col "  @click="urouter.push('/wav')"  :class="[ goHome =='realtime' ? 'active' : '']" >
+        <SvgIcon icon="fluent:document-sparkle-20-filled" class="text-3xl"></SvgIcon>
+        <div class="text-[13px]">{{$t('mj.rttab')}}</div>
+      </div>
+
 
 
       <!-- <div  v-if="!isDisableMenu ( 'gallery')"  class="flex items-center justify-center flex-col " @click="homeStore.setMyData({act:'gallery'})" >

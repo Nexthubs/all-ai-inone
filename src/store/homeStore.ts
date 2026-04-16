@@ -18,7 +18,7 @@ export const homeStore = reactive({
         ,is_viggle_pro:false
        
     }
-    
+   
     ,setMyData( v:object){
         this.myData={...this.myData,...v}; 
         if( Object.keys(v).indexOf('act')>-1){ 
@@ -65,7 +65,7 @@ const  getDefault=()=>{
 const amodel = homeStore.myData.session.amodel??'gpt-3.5-turbo'
 let v:gptConfigType={
         model: amodel,
-        max_tokens:1024,
+        max_tokens:4096,
         userModel:'',
         talkCount:10,
         systemMessage:'',

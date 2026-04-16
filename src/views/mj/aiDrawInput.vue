@@ -55,16 +55,11 @@ initLoad();
     <n-tab-pane name="start" tab=""> 
 
     </n-tab-pane>
-    <n-tab-pane name="midjourney" tab="MidJourney" >
+    <n-tab-pane name="midjourney" tab="图片生成" >
       <!--  -->
     <n-tabs type="segment" animated   default-value="draw23" size="small">
         <n-tab-pane name="draw23" :tab="$t('mjchat.draw')">
           <aiDrawInputItem @draw-sent="drawSent" @close="$emit('close')"></aiDrawInputItem>
-        </n-tab-pane>
-        <!-- <n-tab-pane name="chap2" tab="第二章">2</n-tab-pane>
-        <n-tab-pane name="chap3" tab="第三章">3</n-tab-pane> -->
-        <n-tab-pane name="face" :tab="$t('mjchat.face')">
-          <div class="p-4"><aiFace  /></div>
         </n-tab-pane>
         <n-tab-pane name="blend" :tab="$t('mjchat.blend')">
           <div class="p-4"><aiBlend  /></div>
@@ -73,15 +68,6 @@ initLoad();
 
     </n-tab-pane>
     
-    <n-tab-pane name="dall.e" tab="Dall.E">
-     <div class="p-4"><aiDall  /></div>
-    </n-tab-pane>
-
-    <n-tab-pane name="ideogram" tab="IdeoGram">
-     <div class="p-2"> <aiIdeoInput/> </div>
-    </n-tab-pane>  
-    
-
 
     <n-tab-pane name="Close" v-if="isMobile" >
       <template #tab>
