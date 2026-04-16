@@ -273,6 +273,9 @@ export const subGPT= async (data:any, chat:Chat.Chat )=>{
                  formData.append('image[]', f.file )
             }
         }else{
+            if(o=='size' && data.data[o]=='auto'){
+                continue;
+            }
             formData.append(o, data.data[o])
         }
        
@@ -434,7 +437,7 @@ export const subModel= async (opt: subModelType)=>{
     let body:any ={
             max_tokens ,
             model ,
-            temperature,
+          //  temperature,
             top_p,
             presence_penalty ,frequency_penalty,
             "messages": opt.message
