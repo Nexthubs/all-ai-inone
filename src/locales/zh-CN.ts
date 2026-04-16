@@ -14,6 +14,7 @@ export default {
     exportSuccess: '导出成功',
     import: '导入',
     importSuccess: '导入成功',
+    hide: '隐藏',
     clear: '清空',
     clearSuccess: '清空成功',
     yes: '是',
@@ -68,6 +69,18 @@ export default {
     chatHistory: '聊天记录',
     theme: '主题',
     language: '语言',
+    webdavSync: 'WebDAV 同步',
+    webdavConfig: '配置',
+    webdavUrl: 'WebDAV 地址',
+    webdavUsername: '用户名',
+    webdavPassword: '密码',
+    webdavConfigError: '请填写完整的 WebDAV 配置',
+    webdavNotConfigured: '请先配置 WebDAV',
+    webdavSyncSuccess: '同步成功',
+    webdavSyncError: '同步失败',
+    webdavTest: '测试连接',
+    webdavUpload: '上传',
+    webdavDownload: '下载',
     api: 'API',
     reverseProxy: '反向代理',
     timeout: '超时',
@@ -381,6 +394,8 @@ export default {
    ,editImage:'图片编辑'
    ,editVideo:'图生视频'
    ,moreset:'更多参数'
+
+   
   },
 
 	draw: {
@@ -510,7 +525,7 @@ export default {
   }
   ,video:{
     menu:"视频",
-    menuinfo:'Luma等 视频创作',
+    menuinfo:'Veo 可灵 pixverse等 视频创作',
     descpls:'视频创作描述',
     lumaabout:"Luma 相关",
     lumaserver:"Luma 接口地址",
@@ -542,7 +557,9 @@ export default {
     repeat2:'过期.重新获取',
 
     rwgen3turbo:'版本: Gen-3 Alpha Turbo',
-    gen3a_turbo_img:'Gen-3 Alpha Turbo 必须带图',
+    gen3a_turbo_img:'Gen-3 Alpha Turbo 必须带图'
+
+    ,selectModel:'请选择模型'
 
   }
   ,dance:{
@@ -589,5 +606,6 @@ export default {
     moban2:'模版名称',
     use:'使用',
   }
+  ,'录音':'录音'
 
 }

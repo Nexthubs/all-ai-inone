@@ -243,7 +243,10 @@ export const subGPT= async (data:any, chat:Chat.Chat )=>{
    let action= data.action;
    // mlog("gp-image-1 base64Array ",   data.base64Array   )
    //chat.myid=  `${Date.now()}`;
-   if(  action=='gpt.dall-e-3' && data.data && data.data.model && data.data.model.indexOf('ideogram')>-1 ){ //ideogram
+   const isDall=  action=='gpt.dall-e-3' || isDallImageModel( data.data?.model) ||  data.data?.model?.indexOf('banana')
+   
+   //if(  action=='gpt.dall-e-3' && data.data && data.data.model && data.data.model.indexOf('ideogram')>-1 ){ //ideogram
+   if( isDall && data.data && data.data.model && data.data.model.indexOf('ideogram')>-1 ){ //ideogram
          mlog("ddlog 数据 ", data.data  )
          try{
             let d= await ideoSubmit(data.data );
@@ -260,7 +263,7 @@ export const subGPT= async (data:any, chat:Chat.Chat )=>{
             chat.loading=false;
             homeStore.setMyData({act:'updateChat', actData:chat });
          }
-   }else if(  action=='gpt.dall-e-3'  && data.data.base64Array!=undefined ){ //执行变化
+   }else if( isDall  && data.data.base64Array!=undefined ){ //执行变化
         mlog("gp-image-1 base64Array ",data.data ,  data.data.base64Array   )
      //let d= await gptFetch('/v1/images/edits', data.data);
      const formData = new FormData( ); 
@@ -270,6 +273,9 @@ export const subGPT= async (data:any, chat:Chat.Chat )=>{
                  formData.append('image[]', f.file )
             }
         }else{
+            if(o=='size' && data.data[o]=='auto'){
+                continue;
+            }
             formData.append(o, data.data[o])
         }
        
@@ -304,7 +310,7 @@ export const subGPT= async (data:any, chat:Chat.Chat )=>{
     }
     
 
-   }else if(  action=='gpt.dall-e-3' ){ //执行变化
+   }else if( isDall ){ //执行变化
        // chat.model= 'dall-e-3';
        
 
@@ -337,6 +343,7 @@ export const isDallImageModel =(model:string|undefined)=>{
     if( model.indexOf('flux')>-1 ) return true; 
     if( model.indexOf('ideogram')>-1 ) return true; 
     if( model.indexOf('gpt-image')>-1 ) return true;  
+   
     return ['dall-e-2' ,'dall-e-3','ideogram' ].indexOf(model)>-1
       
 }
@@ -430,7 +437,7 @@ export const subModel= async (opt: subModelType)=>{
     let body:any ={
             max_tokens ,
             model ,
-            temperature,
+          //  temperature,
             top_p,
             presence_penalty ,frequency_penalty,
             "messages": opt.message
