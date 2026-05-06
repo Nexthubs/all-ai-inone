@@ -308,12 +308,7 @@ load();
                     </div>
                     </template>
                 </div>
-                <div v-if="otherButton.length>0" class=" flex justify-start items-center flex-wrap " >
-                    
-                     <div class="p-1"  v-for="ib in otherButton"> 
-                        <NButton  @click="subV2(ib)" size="small" type="info" >{{  ib.emoji??''  }}{{ ib.label??'' }}  </NButton>
-                    </div>
-                </div>
+
 
                 <div class=" flex justify-start items-center flex-wrap " v-if="chat.opt?.action==='UPSCALE' || 'DESCRIBE'===chat.opt?.action"> 
                     <div class="p-1"><NButton  @click="subV3('image')" size="small" type="info" >{{ $t('mj.editImage') }}</NButton></div>
