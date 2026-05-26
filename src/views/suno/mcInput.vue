@@ -29,7 +29,11 @@ const cs= ref({
 });
 
 const mvOption= [
-{label:'version: v4.5',value: 'chirp-auk'}
+{label: 'version: v3.5',value: 'chirp-v3-5'}
+,{label:'version: v3',value: 'chirp-v3-0'}
+,{label:'version: v4',value: 'chirp-v4'}
+,{label:'version: v4.5-all',value: 'chirp-auk-turbo'}
+,{label:'version: v4.5',value: 'chirp-auk'}
 ,{label:'version: v4.5+',value: 'chirp-bluejay'}
 ,{label:'version: v5',value: 'chirp-crow'}
 ,{label:'version: v5.5',value: 'chirp-fenix'}
