@@ -358,9 +358,6 @@ load();
           </div>
     </NModal>
 
-    <NModal v-model:show="mst.isShow"   preset="card"  :title=" mst.type=='video'?$t('mj.editVideo'):$t('mj.editImage')" style="max-width: 800px;" @close="mst.isShow=false">
-          <AiEditImage :chat="chat" :img="st.uri_base64" @success="mst.isShow=false"  v-if="mst.isShow && mst.type=='image'"   />
-    </NModal>
 </div>
 <div v-else class="w-[200px] h-[150px] flex flex-col justify-center items-center" >
     <div class="p-4">{{ $t('mjchat.loading') }}</div>
