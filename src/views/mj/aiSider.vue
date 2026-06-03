@@ -77,6 +77,24 @@ const handleDanceClick = () => {
 <div class="flex-shrink-0 w-[60px] z-[1000]  h-full" v-if="!isMobile" data-tauri-drag-region>
     <div class="flex h-full select-none flex-col items-center justify-between bg-[#e8eaf1] px-2 pt-4 pb-8 dark:bg-[#25272d]">
         <div class="flex flex-col space-y-4 flex-1 " :class="{ 'pt-5': homeStore.myData.isClient }" data-tauri-drag-region>
+
+
+				<!--   打开新的窗口<a v-if="!isDisableMenu ( 'realtime')"   @click="openExternalLink('https://flow.nexthubs.cn')"  -->
+						
+             <a v-if="!isDisableMenu ( 'realtime')"   @click="st.active='wav'; urouter.push('/wav')"  
+                class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
+                <n-tooltip placement="right" trigger="hover">
+                  <template #trigger> 
+                    <div  class="flex  h-full justify-center items-center py-1 flex-col " :class="[ goHome =='realtime' ? 'active' : '']">
+                      <SvgIcon icon="fluent:document-sparkle-20-filled" class="text-3xl flex-1"></SvgIcon>
+                      <span class="text-[10px]">{{$t('mj.rttab')}}</span>
+                    </div>  
+                  </template>
+                    {{ $t('mj.rtinfo') }}
+                </n-tooltip>                
+            </a>
+					
+					
             <a      @click="st.active='chat'; urouter.push(`/chat`)" class="router-link-active router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
                 <n-tooltip placement="right" trigger="hover">
                   <template #trigger> 
@@ -169,23 +187,6 @@ const handleDanceClick = () => {
                     {{ $t('dance.menuinfo') }}
                 </n-tooltip>                
             </a>
-
-<!--   打开新的窗口<a v-if="!isDisableMenu ( 'realtime')"   @click="openExternalLink('https://flow.nexthubs.cn')"  -->
-						
-             <a v-if="!isDisableMenu ( 'realtime')"   @click="st.active='wav'; urouter.push('/wav')"  
-                class=" router-link-exact-active h-12 w-12 cursor-pointer rounded-xl bg-white duration-300 dark:bg-[#34373c] hover:bg-[#bbb] dark:hover:bg-[#555]">
-                <n-tooltip placement="right" trigger="hover">
-                  <template #trigger> 
-                    <div  class="flex  h-full justify-center items-center py-1 flex-col " :class="[ goHome =='realtime' ? 'active' : '']">
-                      <SvgIcon icon="fluent:document-sparkle-20-filled" class="text-3xl flex-1"></SvgIcon>
-                      <span class="text-[10px]">{{$t('mj.rttab')}}</span>
-                    </div>  
-                  </template>
-                    {{ $t('mj.rtinfo') }}
-                </n-tooltip>                
-            </a>
-
-            
 
              
 
