@@ -231,7 +231,19 @@ export const viggleProxyFileDo= async( req:Request, res:Response, next?:NextFunc
 export const sunoProxy=proxy(process.env.SUNO_SERVER??  API_BASE_URL, {
   https: false, limit: '10mb',
   proxyReqPathResolver: function (req) {
-    return req.originalUrl.replace('/sunoapi', '') // 将URL中的 `/openapi` 替换为空字符串
+    let resolvedPath = req.originalUrl.replace('/sunoapi', '')
+    // 如果 SUNO_SERVER 包含路径（如 https://api.example.com/sunoapi），
+    // 需要将该路径前缀加回去，因为 express-http-proxy 只使用主机部分，路径会被 proxyReqPathResolver 的返回值覆盖
+    try {
+      const serverUrl = process.env.SUNO_SERVER
+      if (serverUrl) {
+        const urlObj = new URL(serverUrl)
+        if (urlObj.pathname && urlObj.pathname !== '/') {
+          resolvedPath = urlObj.pathname.replace(/\/$/, '') + resolvedPath
+        }
+      }
+    } catch(e) {}
+    return resolvedPath
   },
   proxyReqOptDecorator: function (proxyReqOpts, srcReq) {
     //mlog("sunoapi")

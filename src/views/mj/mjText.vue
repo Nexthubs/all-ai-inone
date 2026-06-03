@@ -308,15 +308,9 @@ load();
                     </div>
                     </template>
                 </div>
-                <div v-if="otherButton.length>0" class=" flex justify-start items-center flex-wrap " >
-                    
-                     <div class="p-1"  v-for="ib in otherButton"> 
-                        <NButton  @click="subV2(ib)" size="small" type="info" >{{  ib.emoji??''  }}{{ ib.label??'' }}  </NButton>
-                    </div>
-                </div>
 
-                <div class=" flex justify-start items-center flex-wrap " v-if="chat.opt?.action==='UPSCALE' || 'DESCRIBE'===chat.opt?.action">
-                    <div class="p-1"><NButton  @click="subV3('video')" size="small" type="info" > <SvgIcon icon="ri:video-add-line"  />{{ $t('mj.editVideo') }}</NButton> </div>  
+
+                <div class=" flex justify-start items-center flex-wrap " v-if="chat.opt?.action==='UPSCALE' || 'DESCRIBE'===chat.opt?.action"> 
                     <div class="p-1"><NButton  @click="subV3('image')" size="small" type="info" >{{ $t('mj.editImage') }}</NButton></div>
                 </div>
 
@@ -364,10 +358,6 @@ load();
           </div>
     </NModal>
 
-    <NModal v-model:show="mst.isShow"   preset="card"  :title=" mst.type=='video'?$t('mj.editVideo'):$t('mj.editImage')" style="max-width: 800px;" @close="mst.isShow=false">
-          <AiEditVidoe :chat="chat" :img="st.uri_base64" @success="mst.isShow=false"  v-if="mst.isShow && mst.type=='video'"   />
-          <AiEditImage :chat="chat" :img="st.uri_base64" @success="mst.isShow=false"  v-if="mst.isShow && mst.type=='image'"   />
-    </NModal>
 </div>
 <div v-else class="w-[200px] h-[150px] flex flex-col justify-center items-center" >
     <div class="p-4">{{ $t('mjchat.loading') }}</div>
