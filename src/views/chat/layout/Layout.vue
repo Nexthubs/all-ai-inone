@@ -35,7 +35,9 @@ if(rt.name =='GPTs'){
 
  
 
-router.replace({ name: 'Chat', params: { uuid: chatStore.active } })
+if (router.currentRoute.value.name === 'Chat' || router.currentRoute.value.path.startsWith('/chat')) {
+  router.replace({ name: 'Chat', params: { uuid: chatStore.active } })
+}
 homeStore.setMyData({local:'Chat'});
 const { isMobile } = useBasicLayout()
 
