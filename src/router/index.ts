@@ -8,18 +8,15 @@ import sunoLayout from '@/views/suno/layout.vue'
 import lumaLayout from '@/views/luma/layout.vue'
 
 const routes: RouteRecordRaw[] = [
-  {
+{
     path: '/',
     name: 'Root',
+    redirect: '/dance',
+  },
+  {
+    path: '/chat/:uuid?',
+    name: 'Chat',
     component: ChatLayout,
-    redirect: '/chat',
-    children: [
-      {
-        path: 'chat/:uuid?', // 相对路径 (去掉/)
-        name: 'Chat',
-        component: () => import('@/views/chat/index.vue'),
-      },
-    ],
   },
   {
     path: '/g',
