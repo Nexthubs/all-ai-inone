@@ -563,8 +563,8 @@ export default {
 
   }
   ,dance:{
-    menu:"工作流",
-    menuinfo:'自动化工作流'
+    menu:"智能体",
+    menuinfo:'AI智能体'
     ,character:'人物角色'
     ,viggleabout:"Viggle 相关",
     viggleserver:"Viggle 接口地址",
