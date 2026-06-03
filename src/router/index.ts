@@ -12,7 +12,7 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'Root',
     component: ChatLayout,
-    redirect: '/chat',
+    redirect: '/dance',
     children: [
       {
         path: 'chat/:uuid?', // 相对路径 (去掉/)
